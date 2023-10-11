@@ -1,0 +1,6 @@
+/* BASIC STYLES HERE */
+
+.wild-pokemon-list {
+  max-height: 60vh;
+  overflow-y: scroll;
+}
