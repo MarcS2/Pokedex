@@ -4,3 +4,9 @@
   max-height: 60vh;
   overflow-y: scroll;
 }
+
+.pokemon-img {
+  height: 45vh;
+  object-fit: cover;
+  margin-left: 24vh;
+}

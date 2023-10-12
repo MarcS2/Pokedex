@@ -5,8 +5,8 @@ class WildPokemonsService {
   async setActivePokemon(pokemonName) {
     try {
       const res = await pokeApi.get(pokemonName)
-      console.log(res.data);
-
+      AppState.activePokemon = res.data
+      console.log('[WILDPOKEMONSERVICE], setActivePokemon, activePokemon', AppState.activePokemon);
     } catch (error) {
 
     }

@@ -1,4 +1,5 @@
 import { AppState } from "../AppState.js";
+import { Pokemon } from "../models/Pokemon.js";
 import { wildPokemonsService } from "../services/WildPokemonnsService.js";
 import { Pop } from "../utils/Pop.js";
 import { setHTML } from "../utils/Writer.js";
@@ -10,10 +11,16 @@ function _drawWildPokemon() {
   setHTML('wild-pokemon-list', content)
 }
 
+function _drawActivePokemon() {
+  const activePokemon = AppState.activePokemon
+  setHTML('active-pokemon', Pokemon.activePokemon)
+}
+
 export class WildPokemonsController {
   constructor() {
     this.getWildPokemon()
     AppState.on('wildPokemon', _drawWildPokemon)
+    AppState.on('activePokemon', _drawActivePokemon)
   }
   async getWildPokemon() {
     try {
