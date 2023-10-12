@@ -1,5 +1,4 @@
 import { AppState } from "../AppState.js";
-import { Pokemon } from "../models/Pokemon.js";
 import { wildPokemonsService } from "../services/WildPokemonnsService.js";
 import { Pop } from "../utils/Pop.js";
 import { setHTML } from "../utils/Writer.js";
@@ -12,8 +11,8 @@ function _drawWildPokemon() {
 }
 
 function _drawActivePokemon() {
-  const activePokemon = AppState.activePokemon
-  setHTML('active-pokemon', Pokemon.activePokemon)
+  // @ts-ignore
+  setHTML('active-pokemon', AppState.activePokemon.activePokemonTemplate)
 }
 
 export class WildPokemonsController {
