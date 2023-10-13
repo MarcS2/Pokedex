@@ -20,10 +20,32 @@ export class Pokemon {
     let pokeType = ''
     this.types.forEach(type => pokeType += type.type.name + ' ')
     console.log(pokeType);
-    return `<div class="border border-3 border-dark fs-2">${this.name}</div>
-    <img class="pokemon-img "
-      src="${this.img}" alt=" pokemon">
-    <div class="border border-3 border-dark fs-2">height: ${this.height}, Weight: ${this.weight} Type: ${pokeType}</div>
+    return `<section class="row mt-5">
+    <div class="col-12 border border-3 border-dark fs-2">
+      ${this.name}
+    </div>
+    <div class="col-12">
+      <img class="pokemon-img " src="${this.img}" alt=" pokemon">
+
+    </div>
+    <div class="col-12">
+      <section class="row border border-3 border-dark fs-2 txt-bg justify-content-between">
+        <div class="col-3">
+          <p class="text-start">Height: ${this.height}</p>
+
+        </div>
+        <div class="col-3">
+          <p class="d-inline text-end mx-3">Weight: ${this.weight}</p>
+
+        </div>
+        <div class="col-12">
+          <p class="text-center">Type: ${pokeType}</p>
+
+        </div>
+      </section>
+
+    </div>
+  </section>
             `
   }
 }

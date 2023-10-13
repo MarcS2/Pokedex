@@ -10,3 +10,8 @@
   object-fit: cover;
   margin-left: 24vh;
 }
+
+
+.txt-bg {
+  background-color: red;
+}
